@@ -1,4 +1,4 @@
-# Kago Fansub
+# Kago Theme
 
 **Kago Fansub** is a WordPress theme for publishing anime, episode, and movie catalogs. It includes editable metadata, custom download links, a MyAnimeList grabber, and view-based homepage rankings.
 
