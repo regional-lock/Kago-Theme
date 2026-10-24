@@ -1,0 +1,1802 @@
+/* KAGOFANSUB MOBILE LAYOUT
+   Desktop styles remain in style.css.
+   This file only adjusts layout and spacing on smaller screens.
+   Existing theme variables and color palette are preserved.
+*/
+
+/* Desktop: bottom navigation is mobile-only. */
+.mobile-bottom-nav {
+  display: none;
+}
+
+.mobile-random-button {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    padding-bottom: 76px;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .topbar,
+  header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    min-height: 60px;
+    padding: 0 14px;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand strong {
+    font-size: 17px;
+    letter-spacing: -0.7px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .topbar > .nav,
+  header.topbar > .nav {
+    display: none;
+    position: absolute;
+    top: 59px;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    height: auto;
+    padding: 10px 12px 13px;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg2);
+    box-shadow: 0 12px 24px #0002;
+  }
+
+  .topbar > .nav.open,
+  header.topbar > .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .search {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    margin-left: auto;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .search input {
+    display: none;
+  }
+
+  .search > span {
+    font-size: 20px;
+  }
+
+  /* Containers and page layouts */
+  .wrap {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px 14px 28px;
+  }
+
+  .layout > *,
+  .main,
+  .main-col,
+  .sidebar {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main > div,
+  .main > section {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .page-heading {
+    padding: 17px 0 14px;
+    margin-bottom: 16px;
+  }
+
+  .page-heading h1 {
+    font-size: clamp(21px, 6vw, 27px);
+    line-height: 1.25;
+  }
+
+  .page-heading p {
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  /* Homepage hero: shorter, same existing artwork and palette */
+  .hero {
+    height: 300px;
+    margin-bottom: 22px;
+  }
+
+  .slide::after {
+    background: linear-gradient(
+      90deg,
+      #0a0f1e 0%,
+      #0a0f1edb 45%,
+      #0a0f1e55 100%
+    );
+  }
+
+  .slide .wrap {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .slide h1 {
+    max-width: 95%;
+    font-size: clamp(25px, 7vw, 32px);
+    line-height: 1.15;
+  }
+
+  .slide .jp {
+    font-size: 15px;
+    margin: 5px 0 9px;
+  }
+
+  .slide p {
+    max-width: 100%;
+    margin-bottom: 13px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .slide .badge {
+    margin-bottom: 9px;
+    font-size: 9px;
+  }
+
+  .slide .tags {
+    gap: 6px;
+    margin: 9px 0;
+  }
+
+  .slide .tags a {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .slide .btn {
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .thumbs {
+    display: none;
+  }
+
+  /* Homepage sections */
+  .sh {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .sh h2,
+  .section-title h2 {
+    font-size: 15px;
+  }
+
+  .sh .more,
+  .see {
+    font-size: 10px;
+  }
+
+  .arr button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .row,
+  .row.six,
+  .row.six .card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 9px;
+  }
+
+  .row .card,
+  .row.six .card {
+    min-width: 0;
+  }
+
+  .poster,
+  .row.six .card .poster {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card h3,
+  .row.six .card h3 {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .card .m,
+  .row.six .card .m {
+    margin-top: 3px;
+    font-size: 9px;
+  }
+
+  .card .g {
+    gap: 4px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+  }
+
+  .card .g span,
+  .card .g a {
+    padding: 2px 5px;
+    font-size: 9px;
+  }
+
+  .pills {
+    gap: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    flex-wrap: wrap;
+  }
+
+  .pills em {
+    padding: 3px 5px;
+    font-size: 9px;
+  }
+
+  #latest .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #season.row,
+  .season-grid,
+  .season-grid.rec-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 9px;
+  }
+
+  /* Recommendation and season sections should not overflow */
+  #recommendation .row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Popular posts: compact three-column poster layout on mobile */
+  .sidebar .box {
+    padding: 13px;
+    margin-bottom: 14px;
+  }
+
+  .sidebar .sh {
+    margin-bottom: 12px !important;
+  }
+
+  .pp {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 9px;
+  }
+
+  .pp li {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .pp .rank {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .pp .th {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+  }
+
+  .pp .c {
+    min-width: 0;
+    padding: 7px 0 0;
+  }
+
+  .pp .tp {
+    margin-bottom: 4px;
+    font-size: 9px;
+  }
+
+  .pp h4 {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .pp .rate,
+  .pp .genre,
+  .pp small {
+    font-size: 9px;
+  }
+
+  .pp li:nth-child(n+4) .rank {
+    display: block;
+  }
+
+  /* Detail page */
+  .detail-layout {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 13px;
+    padding: 13px;
+  }
+
+  .detail-poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: transparent;
+    align-self: start;
+    border-radius: 7px;
+  }
+
+  .detail-info h1 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    line-height: 1.3;
+  }
+
+  .detail-info .sub {
+    margin-bottom: 9px;
+    font-size: 10px;
+  }
+
+  .detail-info .tags {
+    gap: 5px;
+    margin: 9px 0;
+  }
+
+  .detail-info .tags span,
+  .detail-info .tags a {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+
+  .meta-list {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 10px 0;
+  }
+
+  .meta-list div {
+    font-size: 10px;
+  }
+
+  .description {
+    font-size: 11px;
+    line-height: 1.75;
+  }
+
+  .content-card {
+    padding: 13px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+  }
+
+  .content-card h2 {
+    font-size: 14px;
+  }
+
+  .cast-grid {
+    grid-auto-columns: minmax(230px, 80%);
+    gap: 10px;
+  }
+
+  /* Episode page */
+  .player {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .player-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+
+  .episode-nav {
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+
+  .episode-nav a {
+    min-height: 38px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .episode-nav.detail-series-nav {
+    margin: 10px 0 14px;
+  }
+
+  /* Anime and movie alphabetical pages */
+  .anime-list-page {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .alphabet-filter {
+    position: static;
+    z-index: auto;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 5px;
+    padding: 9px;
+  }
+
+  .alphabet-button {
+    min-width: 0;
+    padding: 7px 2px;
+    font-size: 10px;
+  }
+
+  .anime-list-toolbar {
+    margin: 11px 0 7px;
+    font-size: 11px;
+  }
+
+  .anime-letter-group {
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 7px;
+    padding: 10px 0;
+  }
+
+  .anime-letter-group h2 {
+    font-size: 16px;
+  }
+
+  .anime-text-link {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    padding: 8px;
+  }
+
+  .anime-text-title {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .anime-text-genres {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  /* Genre page */
+  .genre-page {
+    padding: 18px 0 35px;
+  }
+
+  .genre-page h1 {
+    font-size: 23px;
+  }
+
+  .genre-page > p {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  #genre-results.row,
+  .row.six#genre-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px 9px;
+  }
+
+  /* 404 page */
+  .error-content {
+    padding: 28px 14px;
+  }
+
+  .error-card {
+    width: 100%;
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+
+  .error-code {
+    font-size: clamp(90px, 27vw, 130px);
+  }
+
+  .error-card h1 {
+    font-size: 22px;
+  }
+
+  .error-card p {
+    font-size: 12px;
+  }
+
+  .error-actions {
+    gap: 8px;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer */
+  footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 14px;
+    padding: 24px 14px 14px;
+  }
+
+  footer:has(> .copyright) {
+    display: block;
+    padding: 0 14px 10px;
+  }
+
+  .footer-col {
+    min-width: 0;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin: 0;
+    padding: 14px 0;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 10px;
+  }
+
+  /* Fixed bottom navigation */
+  .mobile-bottom-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: var(--bg2);
+    box-shadow: 0 -8px 24px #0002;
+  }
+
+  .mobile-bottom-nav a {
+    display: flex;
+    min-height: 43px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--mut);
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .mobile-bottom-nav .nav-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    overflow: hidden;
+    background: currentColor;
+    font-size: 0;
+    line-height: 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+
+  .mobile-bottom-nav a[data-mobile-nav="home"] .nav-icon {
+    font-size: 0;
+    line-height: 0;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z'/%3E%3C/svg%3E");
+  }
+
+  .mobile-bottom-nav a[data-mobile-nav="anime"] .nav-icon {
+    font-size: 0;
+    line-height: 0;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='14' width='7' height='7' rx='1'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1'/%3E%3Crect x='14' y='14' width='7' height='7' rx='1'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1'/%3E%3C/svg%3E");
+  }
+
+  .mobile-bottom-nav a[data-mobile-nav="movies"] .nav-icon {
+    font-size: 0;
+    line-height: 0;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M7 3v18M17 3v18M3 7h4M3 12h18M3 17h4M17 7h4M17 17h4'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M7 3v18M17 3v18M3 7h4M3 12h18M3 17h4M17 7h4M17 17h4'/%3E%3C/svg%3E");
+  }
+
+  .mobile-bottom-nav a.active {
+    color: var(--pri2);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    height: 280px;
+  }
+
+  .slide h1 {
+    font-size: 24px;
+  }
+
+  .slide p {
+    font-size: 11px;
+  }
+
+  .row,
+  .row.six,
+  #latest .row,
+  #recommendation .row,
+  #season.row,
+  .season-grid,
+  .season-grid.rec-grid,
+  #genre-results.row {
+    gap: 10px 7px;
+  }
+
+  .detail-layout {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .detail-info h1 {
+    font-size: 17px;
+  }
+
+  .alphabet-filter {
+    gap: 4px;
+    padding: 7px;
+  }
+}
+
+/* Desktop/tablet above the mobile breakpoint: no mobile bottom bar. */
+@media (min-width: 761px) {
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .search.search-open {
+    position: absolute;
+    right: 56px;
+    left: 130px;
+    z-index: 1002;
+    width: auto;
+    padding: 0 10px;
+    justify-content: flex-start;
+    border-color: var(--line);
+    background: var(--panel);
+  }
+
+  .search.search-open input {
+    display: block;
+  }
+}
+
+/* ==========================================================
+   COMPACT ANIME APP — mobile-first composition, not desktop scaling
+   Palette is inherited from the original theme variables.
+   ========================================================== */
+@media (max-width: 760px) {
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+
+  .topbar, header.topbar {
+    height: 58px;
+    min-height: 58px;
+    padding-inline: 16px;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg2);
+    box-shadow: 0 5px 18px #0002;
+  }
+
+  .brand strong { font-size: 18px; letter-spacing: -.5px; }
+  .menu-toggle { order: 3; }
+  .search { order: 2; }
+
+  .wrap { padding-inline: 16px; }
+  .layout { padding: 14px 16px 24px; }
+
+  /* Featured title becomes a cinematic app feature panel */
+  .hero {
+    height: 390px;
+    margin: 0 12px 24px;
+    overflow: hidden;
+    border-radius: 16px;
+    isolation: isolate;
+    background: var(--bg2);
+  }
+
+  .hero .slide {
+    border-radius: 16px;
+    overflow: hidden;
+    background-position: center 24%;
+  }
+
+  .hero .slide::after {
+    background: linear-gradient(0deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 88%, transparent) 25%, color-mix(in srgb, var(--bg) 12%, transparent) 72%, #0003 100%);
+  }
+
+  .hero .slide .wrap {
+    display: flex;
+    height: 100%;
+    max-width: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 22px 18px 26px;
+  }
+
+  .hero .slide .badge {
+    display: inline-flex;
+    margin-bottom: 10px;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: 9px;
+    letter-spacing: .8px;
+  }
+
+  .hero .slide h1 {
+    max-width: 100%;
+    margin: 0 0 5px;
+    font-size: clamp(27px, 8vw, 35px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -.8px;
+  }
+
+  .hero .slide .jp { margin: 0 0 8px; font-size: 13px; opacity: .8; }
+  .hero .slide p {
+    display: -webkit-box;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 0 13px;
+    font-size: 12px;
+    line-height: 1.55;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .hero .slide .tags { margin: 0 0 14px; gap: 6px; }
+  .hero .slide .tags a { padding: 5px 8px; border-radius: 6px; font-size: 10px; }
+  .hero .slide .btn { min-height: 39px; padding: 10px 15px; border-radius: 8px; font-size: 11px; }
+  .hero .thumbs { display: flex; position: absolute; right: 14px; bottom: 14px; gap: 5px; }
+  .hero .thumbs > * { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* App-like section headers */
+  .sh, .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 14px;
+  }
+  .sh h2, .section-title h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.35px;
+  }
+  .sh h2::before, .section-title h2::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 17px;
+    margin-right: 9px;
+    border-radius: 4px;
+    background: var(--pri2);
+    vertical-align: -3px;
+  }
+  .sh .more, .see { font-size: 11px; font-weight: 700; white-space: nowrap; }
+
+  /* Poster rails: each section behaves like a streaming app shelf */
+  #latest .row,
+  #recommendation .row,
+  #season.row,
+  .season-grid,
+  .season-grid.rec-grid,
+  .row.six,
+  #genre-results.row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 39%;
+    grid-template-columns: none;
+    gap: 13px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 1px 10px;
+    margin: 0 -1px 6px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  #latest .row::-webkit-scrollbar,
+  #recommendation .row::-webkit-scrollbar,
+  #season.row::-webkit-scrollbar,
+  .season-grid::-webkit-scrollbar,
+  .row.six::-webkit-scrollbar { display: none; }
+
+  #latest .row .card,
+  #recommendation .row .card,
+  #season.row .card,
+  .season-grid .card,
+  .row.six .card {
+    width: auto;
+    min-width: 0;
+    scroll-snap-align: start;
+  }
+
+  .poster, .row.six .card .poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4.15;
+    border-radius: 11px;
+    box-shadow: 0 6px 15px #0002;
+  }
+
+  .card h3, .row.six .card h3 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 8px 0 0;
+    min-height: 0 !important;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  #latest .card:has(> .index-poster-link:hover) h3,
+  #latest .card:has(> .index-poster-link:hover) h3 > .index-title-link,
+  #movie .card:has(> .index-poster-link:hover) h3,
+  #movie .card:has(> .index-poster-link:hover) h3 > .index-title-link,
+  #season .card:has(> .season-anime-link:hover) h3,
+  #season .card:has(> .season-anime-link:hover) h3 > .season-anime-link {
+    color: var(--pri2);
+  }
+
+  #latest .card h3,
+  #season .card h3,
+  #movie .card h3 {
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  #latest .card h3 > .index-title-link,
+  #movie .card h3 > .index-title-link,
+  #season .card h3 > .season-anime-link {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card .m, .row.six .card .m { margin: 2px 0 0 !important; font-size: 10px; }
+  .card .g { gap: 5px; margin-top: 2px !important; }
+  .card .g span, .card .g a { padding: 3px 6px; border-radius: 5px; font-size: 9px; }
+  .pills { left: 6px; right: 6px; bottom: 6px; gap: 4px; }
+  .pills em { padding: 4px 6px; border-radius: 5px; font-size: 9px; }
+
+  /* Popular shelf is cards, not a miniature desktop sidebar */
+  .sidebar { margin-top: 22px; }
+  .sidebar .box { padding: 0; margin-bottom: 24px; border: 0; background: transparent; box-shadow: none; }
+  .pp {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .pp li {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    align-items: center;
+    gap: 11px;
+    padding: 9px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg2);
+  }
+  .pp .th { width: 88px; height: 112px; aspect-ratio: auto; border-radius: 8px; }
+  .pp .rank { top: 14px; left: 14px; width: 23px; height: 23px; line-height: 23px; border-radius: 7px; }
+  .pp .c { padding: 0; }
+  .pp .tp { font-size: 10px; margin-bottom: 5px; }
+  .pp h4 { font-size: 12px; line-height: 1.45; }
+  .pp .rate, .pp .genre, .pp small { font-size: 10px; }
+
+  /* Page headers and filters feel native on mobile */
+  .page-heading { padding: 10px 0 16px; margin-bottom: 15px; }
+  .page-heading h1 { font-size: 25px; letter-spacing: -.5px; }
+  .breadcrumb { font-size: 10px; }
+  .alphabet-filter { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 5px; padding: 9px; scrollbar-width: none; }
+  .alphabet-filter > * { flex: 0 0 auto; min-width: 30px; min-height: 32px; }
+
+  /* Detail page becomes a top poster/info hero plus full-width content */
+  .detail-layout {
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 15px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+  .detail-poster { height: auto; aspect-ratio: auto; object-fit: contain; background: transparent; align-self: start; border-radius: 10px; }
+  .detail-info h1 { font-size: 20px; line-height: 1.2; }
+  .detail-info .sub { font-size: 11px; }
+  .meta-list { grid-template-columns: 1fr; gap: 6px; }
+  .meta-list div { font-size: 11px; }
+  .description { font-size: 12px; line-height: 1.7; }
+  .content-card { padding: 16px; margin-bottom: 15px; border-radius: 13px; }
+  .content-card h2 { font-size: 16px; }
+  .cast-grid { grid-auto-columns: minmax(240px, 82%); gap: 12px; }
+
+  /* Episode viewing gets a dedicated stacked player experience */
+  .player { border-radius: 13px; }
+  .player-image img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
+  .episode-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .episode-nav a { display: flex; align-items: center; justify-content: center; min-height: 42px; padding: 9px; border-radius: 8px; font-size: 11px; }
+  /* Bottom bar is the primary app navigation */
+  .mobile-bottom-nav {
+    padding: 8px 18px calc(8px + env(safe-area-inset-bottom));
+    min-height: 64px;
+    backdrop-filter: blur(18px);
+    background: color-mix(in srgb, var(--bg2) 92%, transparent);
+  }
+  .mobile-bottom-nav a { min-height: 45px; font-size: 10px; gap: 4px; }
+  .mobile-bottom-nav .nav-icon { font-size: 20px; }
+}
+
+@media (max-width: 380px) {
+  @media (max-width: 760px) {
+    .hero { height: 360px; }
+    #latest .row, #recommendation .row, #season.row, .season-grid, .season-grid.rec-grid, .row.six, #genre-results.row { grid-auto-columns: 43%; }
+    .detail-layout { grid-template-columns: 100px minmax(0, 1fr); }
+    .pp { grid-auto-columns: 84%; }
+  }
+}
+
+/* Keep the mobile controls pinned to the viewport above the safe-area inset. */
+@media (max-width: 760px) {
+  .mobile-bottom-nav {
+    position: fixed !important;
+    top: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 3000 !important;
+    display: grid !important;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Final mobile slider layout overrides earlier legacy breakpoints. */
+@media (max-width: 760px) {
+  .hero {
+    position: relative;
+    touch-action: pan-y;
+    width: calc(100% - 24px);
+    height: min(72vh, 420px);
+    min-height: 340px;
+    margin: 12px auto 22px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--bg2);
+  }
+
+  .hero .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .hero .slide::before {
+    background-position: center 28%;
+    background-size: cover;
+  }
+
+  .hero .slide::after {
+    background: linear-gradient(
+      0deg,
+      var(--bg) 0%,
+      color-mix(in srgb, var(--bg) 94%, transparent) 20%,
+      color-mix(in srgb, var(--bg) 64%, transparent) 48%,
+      transparent 100%
+    );
+  }
+
+  .hero .slide .wrap {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0;
+    padding: 22px 17px 38px;
+  }
+
+  .hero .slide .badge { margin: 0 0 9px; }
+  .hero .slide h1 { margin: 0 0 4px; font-size: clamp(25px, 7.5vw, 34px); line-height: 1.12; }
+  .hero .slide .jp { margin: 2px 0 8px; font-size: 13px; }
+  .hero .slide .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+  .hero .slide .tags a { padding: 4px 8px; font-size: 10px; }
+  .hero .slide p {
+    display: -webkit-box;
+    max-width: 100%;
+    margin: 0 0 12px;
+    overflow: hidden;
+    font-size: 11px;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .hero .slide .btn { min-height: 36px; padding: 8px 13px; font-size: 11px; }
+  .hero .thumbs { display: none; }
+
+  .hero .dots {
+    right: 16px;
+    bottom: 12px;
+    left: 16px;
+    z-index: 6;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero { min-height: 320px; }
+  .hero .slide .wrap { padding-right: 14px; padding-left: 14px; }
+}
+
+/* Mobile header uses search; primary navigation stays in the bottom bar. */
+@media (max-width: 760px) {
+  .topbar .menu-toggle {
+    display: none !important;
+  }
+
+  .topbar > .nav,
+  .topbar > .nav.open {
+    display: none !important;
+  }
+
+  .topbar .search {
+    order: 1;
+    flex: 0 0 38px;
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    margin-left: auto;
+  }
+
+  .topbar .search.search-open {
+    top: 8px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    height: 42px;
+  }
+
+  .topbar .search.search-open > span {
+    display: grid;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 32px;
+    place-items: center;
+    color: var(--muted);
+    font-size: 25px;
+    line-height: 1;
+  }
+}
+
+/* Animate the mobile search panel from its icon position. */
+@media (max-width: 760px) {
+  .topbar > .search:not(.search-open):not(.search-closing) {
+    display: none !important;
+  }
+
+  .mobile-bottom-nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mobile-bottom-nav > .mobile-search-control {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    width: auto;
+    height: auto;
+    min-height: 45px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--muted);
+    transition: transform 0.22s ease, opacity 0.18s ease, background-color 0.2s ease,
+      border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .mobile-search-control > span {
+    display: grid;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    font-size: 0;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .mobile-search-control > span::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  .mobile-bottom-nav > .mobile-search-close {
+    display: flex;
+    min-width: 0;
+    min-height: 45px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    color: var(--pri2);
+    font-size: 10px;
+    font-weight: 600;
+    animation: mobile-search-slot-in 220ms cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  .mobile-bottom-nav > .mobile-search-close.is-closing {
+    animation: mobile-search-slot-out 220ms ease both;
+  }
+
+  .mobile-search-close > span:first-child {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  .mobile-bottom-nav > .mobile-search-control.search-returning {
+    animation: mobile-search-slot-in 220ms cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  @keyframes mobile-search-slot-in {
+    from { opacity: 0; transform: scale(.7) rotate(-35deg); }
+    to { opacity: 1; transform: scale(1) rotate(0); }
+  }
+
+  @keyframes mobile-search-slot-out {
+    from { opacity: 1; transform: scale(1) rotate(0); }
+    to { opacity: 0; transform: scale(.7) rotate(35deg); }
+  }
+
+  .mobile-search-control::after {
+    content: "Search";
+    font-size: 10px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .mobile-bottom-nav .mobile-search-control input {
+    display: none;
+    flex: 1 1 auto;
+    width: 0;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: width 0.22s ease, opacity 0.16s ease, padding 0.22s ease;
+  }
+
+  .mobile-search-control.search-open {
+    position: fixed;
+    top: var(--mobile-search-center-y, 50dvh);
+    right: 12px;
+    bottom: auto;
+    left: 12px;
+    z-index: 3001;
+    display: flex;
+    width: auto;
+    height: 48px;
+    min-height: 48px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    box-shadow: 0 10px 28px #0006;
+    color: var(--text);
+    transform: translateY(-50%) scale(1);
+  }
+
+  .mobile-search-control.search-closing {
+    position: fixed;
+    top: var(--mobile-search-center-y, 50dvh);
+    right: 12px;
+    bottom: auto;
+    left: 12px;
+    z-index: 3001;
+    display: flex;
+    width: auto;
+    height: 48px;
+    min-height: 48px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    box-shadow: 0 10px 28px #0006;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(calc(-50% + 10px)) scale(.97);
+  }
+
+  .mobile-search-control.search-open > span {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 30px;
+    color: var(--pri2);
+    font-size: 0;
+  }
+
+  .mobile-search-control.search-open > span::before {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  .mobile-search-control.search-open::after {
+    display: none;
+  }
+
+  .mobile-search-control.search-closing::after {
+    display: none;
+  }
+
+  .mobile-search-control.search-open input {
+    display: block;
+    width: auto;
+    padding: 0 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar .search {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    left: calc(100% - 52px);
+    z-index: 1002;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    height: 38px;
+    overflow: hidden;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 0 5px;
+    border-color: transparent;
+    background: transparent;
+    transition: left 0.24s ease, height 0.24s ease, padding 0.24s ease,
+      background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .topbar .search > span {
+    flex: 0 0 28px;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .topbar .search input {
+    display: block;
+    flex: 1 1 auto;
+    width: 0;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: width 0.24s ease, opacity 0.16s ease, padding 0.24s ease;
+  }
+
+  .topbar .search.search-open {
+    top: 8px;
+    right: 14px;
+    left: 14px;
+    width: auto;
+    height: 42px;
+    padding: 0 7px;
+    border-color: var(--line);
+    background: var(--panel);
+    box-shadow: 0 8px 22px #0004;
+  }
+
+  .topbar .search.search-open > span {
+    color: var(--pri2);
+  }
+
+  .topbar .search.search-open input {
+    width: auto;
+    padding: 0 5px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Open mobile search as a dropdown below the top navbar. */
+@media (max-width: 760px) {
+  .topbar > .search.search-open,
+  .topbar > .search.search-closing {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 14px;
+    bottom: auto;
+    left: 14px;
+    z-index: 3001;
+    display: flex !important;
+    width: auto;
+    height: 48px;
+    min-height: 48px;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    padding: 0 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+    box-shadow: 0 10px 28px #0006;
+    transform: translateY(0) scale(1);
+    transition: opacity 180ms ease, transform 220ms cubic-bezier(.2, .8, .2, 1),
+      box-shadow 220ms ease, background-color 180ms ease;
+  }
+
+  .topbar > .search.search-open > span,
+  .topbar > .search.search-closing > span {
+    display: none;
+  }
+
+  .topbar > .search.search-open {
+    opacity: 1;
+    pointer-events: auto;
+    animation: mobile-search-dropdown-in 220ms cubic-bezier(.2, .8, .2, 1) both;
+  }
+
+  .topbar > .search.search-closing {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px) scale(.98);
+    animation: mobile-search-dropdown-out 200ms ease both;
+  }
+
+  .topbar > .search.search-open::after,
+  .topbar > .search.search-closing::after {
+    display: none;
+  }
+
+  @keyframes mobile-search-dropdown-in {
+    from { opacity: 0; transform: translateY(-10px) scale(.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes mobile-search-dropdown-out {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-8px) scale(.98); }
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .topbar > .search.search-open,
+  .topbar > .search.search-closing,
+  .mobile-bottom-nav > .mobile-search-close,
+  .mobile-bottom-nav > .mobile-search-control.search-returning {
+    animation-duration: 1ms;
+    transition-duration: 1ms;
+  }
+}
+
+@media (max-width: 760px) {
+  .mobile-carousel-guide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: -2px 0 12px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .mobile-carousel-guide[hidden] {
+    display: none !important;
+  }
+
+  .mobile-carousel-track {
+    position: relative;
+    display: block;
+    flex: 0 0 52px;
+    height: 3px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--line);
+  }
+
+  .mobile-carousel-progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 8px;
+    border-radius: inherit;
+    background: var(--pri2);
+    transition: left 120ms linear, width 180ms ease;
+  }
+
+  #latest .sh .arr {
+    display: none;
+  }
+
+  #season.row {
+    gap: 9px;
+    padding: 2px 4px 10px;
+    margin: 0 -4px 6px;
+    scroll-padding-inline: 4px;
+  }
+
+  #season.row .card .poster {
+    aspect-ratio: 2 / 3;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Compact cast cards on the detail page for mobile screens. */
+  #characters .cast-grid {
+    grid-auto-columns: 150px;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+
+  #characters .cast-char {
+    padding: 6px 6px 0;
+  }
+
+  #characters .cast-photo {
+    border-radius: 5px;
+  }
+
+  #characters .cast-name {
+    padding: 5px 1px;
+    font-size: 9.5px;
+  }
+
+  #characters .cast-name small {
+    font-size: 8px;
+  }
+
+  #characters .cast-va {
+    gap: 6px;
+    padding: 6px;
+    margin-top: 5px;
+  }
+
+  #characters .cast-va .cast-photo {
+    width: 28px;
+  }
+
+  #characters .cast-va .cast-name {
+    font-size: 8.5px;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Keep the detail information readable beside a smaller poster. */
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .detail-poster {
+    width: min(160px, 48%);
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: transparent;
+    align-self: start;
+    justify-self: center;
+    border-radius: 7px;
+  }
+
+  .detail-info h1 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-info .sub {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+
+  .detail-info .tags {
+    gap: 4px;
+    margin: 7px 0;
+  }
+
+  .detail-info .tags span,
+  .detail-info .tags a {
+    padding: 3px 5px;
+    font-size: 8px;
+  }
+
+  .detail-info .meta-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px 10px;
+    margin: 8px 0;
+  }
+
+  .detail-info .meta-list div {
+    font-size: 9px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-info .description {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .synopsis-toggle {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 0;
+    color: var(--pri2);
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .detail-info .description:not(.is-expanded) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .detail-info .description.is-expanded {
+    display: block;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 760px) {
+  .download-box {
+    padding: 9px;
+    border-radius: 10px;
+  }
+
+  .download-box h2 {
+    margin: -9px -9px 7px;
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .download-options {
+    gap: 5px;
+  }
+
+  .download-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .download-quality { flex-basis: 48px; }
+
+  .download-quality,
+  .download-options button {
+    min-height: 27px;
+    padding: 4px 3px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 54px;
+  }
+
+  .topbar,
+  header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+    height: 54px;
+    min-height: 54px;
+    padding: 0 14px;
+    gap: 8px;
+    border-bottom: 1px solid transparent;
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+
+  .topbar.is-scrolled,
+  header.topbar.is-scrolled {
+    border-bottom-color: var(--line);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+  }
+
+  .topbar .brand {
+    flex: 0 1 auto;
+  }
+
+  .topbar .brand strong {
+    font-size: 17px;
+    letter-spacing: -0.7px;
+  }
+
+  .topbar > .menu-toggle {
+    display: none !important;
+  }
+
+  .topbar > .mobile-random-button {
+    display: grid;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    margin-left: auto;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: color-mix(in srgb, var(--bg2) 76%, transparent);
+    color: var(--pri2);
+  }
+
+  .mobile-random-button span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 3 5 0 0 5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 3 5 0 0 5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+}
+

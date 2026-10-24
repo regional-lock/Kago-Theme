@@ -1,0 +1,18 @@
+.kago-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:4px 16px}
+.kago-field{margin:0 0 10px}.kago-label{display:block;font-weight:600;margin-bottom:3px}
+.kago-media-preview{margin:4px 0}.kago-media-preview img{max-width:90px;height:auto;border-radius:4px;display:block}
+.kago-cast-row{border:1px solid #dcdcde;border-radius:4px;padding:10px;margin-bottom:10px;background:#fafafa}
+.kago-cast-row label{display:block;margin-bottom:6px}
+.kago-dl th{width:70px}
+.kago-dl-group{border:1px solid #dcdcde;border-radius:5px;padding:12px;margin:0 0 12px;background:#fafafa}
+.kago-dl-quality-row{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:8px;align-items:center;margin-bottom:10px}
+.kago-dl-quality-row label{font-weight:600}
+.kago-dl-hosts{display:grid;gap:8px}
+.kago-dl-host-row{display:grid;grid-template-columns:minmax(140px,190px) minmax(0,1fr) auto;gap:8px;align-items:center}
+.kago-dl-group>.kago-dl-add-host{margin-top:8px}
+@media(max-width:782px){.kago-dl-quality-row{grid-template-columns:1fr}.kago-dl-host-row{grid-template-columns:1fr}.kago-dl-host-row .widefat{width:100%}}
+.kago-gr-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:14px}
+.kago-gr-card{border:1px solid #dcdcde;border-radius:6px;padding:8px;background:#fff;font-size:12px}
+.kago-gr-card strong{display:block;margin:6px 0 2px}
+.kago-gr-log{background:#101827;color:#cbd5e1;padding:10px;border-radius:6px;min-height:50px;font-family:monospace;font-size:12px;white-space:pre-wrap;margin-top:14px}
+.kago-no-poster{display:inline-block;width:8px;height:8px;border-radius:50%;background:#d63638}
