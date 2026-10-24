@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action(
 	'customize_register',
 	function ( $wp_customize ) {
-		$wp_customize->add_section( 'kago', array( 'title' => __( 'Kago Fansub', 'kagofansub' ), 'priority' => 30 ) );
+		$wp_customize->add_section( 'kago', array( 'title' => __( 'Kago Theme', 'kagofansub' ), 'priority' => 30 ) );
 		$fields = array(
 			'kago_brand_main'   => array( 'KAGO', __( 'Brand text (white part)', 'kagofansub' ), 'text', 'sanitize_text_field' ),
 			'kago_brand_accent' => array( 'FANSUB', __( 'Brand text (accent part)', 'kagofansub' ), 'text', 'sanitize_text_field' ),
