@@ -45,7 +45,7 @@ Theme activation creates the default taxonomies and About, DMCA, and Contact pag
 
 ### Install for local development
 
-Clone or copy the theme directory into `wp-content/themes/kagofansub`, then activate it from **Appearance > Themes**.
+Clone or copy the theme directory into `wp-content/themes/kagotheme`, then activate it from **Appearance > Themes**.
 
 ## Content types
 
