@@ -36,9 +36,9 @@
 
 ### Install as a theme
 
-1. Download or package this repository as `kagofansub.zip`.
+1. Download or package this repository as `kagotheme.zip`.
 2. In WordPress, go to **Appearance > Themes > Add New > Upload Theme** and upload the ZIP.
-3. Activate **Kago Fansub**.
+3. Activate **Kago Theme**.
 4. Go to **Settings > Permalinks**, select **Post name**, and save.
 
 Theme activation creates the default taxonomies and About, DMCA, and Contact pages, creates the Primary menu, and refreshes permalinks.
